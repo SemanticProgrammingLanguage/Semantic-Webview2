@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   id-token: write
   attestations: write
 
@@ -49,6 +49,22 @@ jobs:
         with:
           subject-path: dist/semantic-webview2-main-${{ github.sha }}.zip
 
+      - name: Publish main branch release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: main-latest
+          target_commitish: main
+          name: Semantic WebView2 main
+          body: |
+            Rolling release built from the current `main` branch.
+            Source commit: `${{ github.sha }}`
+            The ZIP is attested with GitHub Artifact Attestations.
+          make_latest: true
+          files: |
+            dist/semantic-webview2-main-${{ github.sha }}.zip
+            dist/SHA256SUMS.txt
+            dist/MAIN_COMMIT.txt
+
       - name: Upload attested main archive
         uses: actions/upload-artifact@v4
         with:
@@ -59,3 +75,4 @@ jobs:
             dist/MAIN_COMMIT.txt
           if-no-files-found: error
           retention-days: 90
+
