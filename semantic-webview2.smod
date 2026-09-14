@@ -1,0 +1,800 @@
+{
+  "schema_version": 1,
+  "name": "semantic-webview2",
+  "source": "vcpkg:webview2:x64-windows",
+  "root": "C:\\Users\\tarek\\Desktop\\Semantic Module\\Semantic\\Modules\\semantic-webview2",
+  "package_hash": "093b675559c827422ef6ad65399d19a2965c607b017354aff3d461f9ca5c638a",
+  "files": [
+    {
+      "path": "bin/Microsoft.Web.WebView2.Core.dll",
+      "kind": "BINARY_MODULE",
+      "source_hash": "6d5bfca0d8dd429819af964e7e5cb094e45e1c26c9cec94d9f06f716700d223e",
+      "status": "SEMANTIC_SERIALIZE_FAILED"
+    },
+    {
+      "path": "bin/WebView2Loader.dll",
+      "kind": "BINARY_MODULE",
+      "source_hash": "86545b66cdb0603bc26b626fb9ad610cb6e71f28d468f5ea66df23b03dda96d5",
+      "status": "SEMANTIC_SERIALIZE_FAILED"
+    },
+    {
+      "path": "debug/bin/Microsoft.Web.WebView2.Core.dll",
+      "kind": "BINARY_MODULE",
+      "source_hash": "6d5bfca0d8dd429819af964e7e5cb094e45e1c26c9cec94d9f06f716700d223e",
+      "status": "SEMANTIC_SERIALIZE_FAILED"
+    },
+    {
+      "path": "debug/bin/WebView2Loader.dll",
+      "kind": "BINARY_MODULE",
+      "source_hash": "86545b66cdb0603bc26b626fb9ad610cb6e71f28d468f5ea66df23b03dda96d5",
+      "status": "SEMANTIC_SERIALIZE_FAILED"
+    },
+    {
+      "path": "debug/lib/Microsoft.Web.WebView2.Core.winmd",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "a60204b043f5d6171a7a5b8e92a55bbd20e45e720c90a6aaeea615fa471da7f1",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "debug/lib/WebView2Loader.dll.lib",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "bfc8ccaaa056be95243a5b66a827e5849d2bb39676fca4dcc2053796d8e15c6d",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "include/WebView2.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/WebView2.h.spz",
+      "readable_semantic_path": "semantic/include/WebView2.h.se",
+      "source_hash": "52174d99459f6c01927eb61671c22600e0aedbcdf59d38db36f52c32a6b55d61",
+      "symbols": [
+        "typedef",
+        "unknown",
+        "base",
+        "COREWEBVIEW2_BOUNDS_MODE_USE_RAW_PIXELS",
+        "extern",
+        "if",
+        "func"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/WebView2EnvironmentOptions.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "source_hash": "a83255409630e1bd99c6fa3b706c89bc4a2ce35a59e939f72119c57403e2bc2e",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "include/WebView2Interop.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/WebView2Interop.h.spz",
+      "readable_semantic_path": "semantic/include/WebView2Interop.h.se",
+      "source_hash": "98d05ad2e13565a2bc3e5dfaedad39bc7ea16968ce9294d7c68c7703e1dc705e",
+      "symbols": [
+        "typedef",
+        "unknown",
+        "IID_ICoreWebView2Interop",
+        "base",
+        "__cplusplus",
+        "if",
+        "func"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/WebView2Interop.idl",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "60dbc1aaf33767400a3a17aa47abf21d02b319374d45bfea3f07d05cc8d6a2de",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "include/WebView2Interop.tlb",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "1c42855f829dd433727e3bcf5bdcabac791d060916860c38a43a3e6c05700a14",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "include/wil/Tracelogging.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "source_hash": "c3e300bc1691689bfbf3b0dd7e926225849cc4fcba2992722d38d5cc8a9b931a",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "include/wil/com.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/com.h.spz",
+      "readable_semantic_path": "semantic/include/wil/com.h.se",
+      "source_hash": "4b95c2201d908b277d6472ddb2efca6a75838430dc4f53a3d747bbc24394adc8",
+      "symbols": [
+        "unknown",
+        "if"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/com_apartment_variable.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/com_apartment_variable.h.spz",
+      "readable_semantic_path": "semantic/include/wil/com_apartment_variable.h.se",
+      "source_hash": "1ad3705691046e0dbd7a717cc7d0e0e3418e2ada8f74a0d4bc4eabe552a751b5",
+      "symbols": [
+        "RoUnregisterForApartmentShutdown",
+        "unknown",
+        "unique_apartment_shutdown_registration"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/common.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/common.h.spz",
+      "readable_semantic_path": "semantic/include/wil/common.h.se",
+      "source_hash": "126afcd82dc11028871ccb5c3e8d27468e5b0ebd42eab6bf38b5c619467286a1",
+      "symbols": [
+        "WIL_EXCEPTION_MODE",
+        "flags",
+        "unknown",
+        "verify_bool",
+        "WIL_SUPPRESS_EXCEPTIONS",
+        "value",
+        "nullptr",
+        "_DEBUG",
+        "WIL_KERNEL_MODE",
+        "arg",
+        "fn",
+        "wil",
+        "condition",
+        "do",
+        "DBG",
+        "NDEBUG",
+        "v",
+        "__EXCEPTIONS",
+        "valid",
+        "decltype",
+        "T",
+        "expr",
+        "WIL_ITERATOR_DEBUG_LEVEL",
+        "extern",
+        "_Out_opt_",
+        "p",
+        "static_cast",
+        "DEBUG",
+        "if",
+        "WI_ODR_PRAGMA",
+        "_header_init",
+        "outParam",
+        "WI_EnumValue",
+        "static_assert",
+        "defined",
+        "name",
+        "val",
+        "inline",
+        "long",
+        "_CPPUNWIND"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/coroutine.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/coroutine.h.spz",
+      "readable_semantic_path": "semantic/include/wil/coroutine.h.se",
+      "source_hash": "d79d8efa59186892dfcb6f6e464affc3e1edab683ba96f3c17a340753e52fc45",
+      "symbols": [
+        "unknown",
+        "typename",
+        "void",
+        "WI_PFN_NOEXCEPT",
+        "template",
+        "selectany",
+        "if",
+        "struct",
+        "restrictedError",
+        "promise"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/cppwinrt.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/cppwinrt.h.spz",
+      "readable_semantic_path": "semantic/include/wil/cppwinrt.h.se",
+      "source_hash": "32fd8c482f7ce607d6ce784ec9bf68988385648ced133d08ecd1751a4b5a7eba",
+      "symbols": [
+        "unknown",
+        "result",
+        "details",
+        "CPPWINRT_VERSION",
+        "versionString",
+        "e.GetErrorCode",
+        "extern",
+        "if",
+        "g_pfnResultFromCaughtException_CppWinRt",
+        "major_version_from_string"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/cppwinrt_authoring.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/cppwinrt_authoring.h.spz",
+      "readable_semantic_path": "semantic/include/wil/cppwinrt_authoring.h.se",
+      "source_hash": "c9c953d79a84eb0a09ccbc6072d03b7c58834a08e962eec172d5fdf77f33e0d5",
+      "symbols": [
+        "unknown"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/cppwinrt_helpers.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/cppwinrt_helpers.h.spz",
+      "readable_semantic_path": "semantic/include/wil/cppwinrt_helpers.h.se",
+      "source_hash": "7233605e0158db0eeca04def476a3d752e9986acff42539ff7f2d3e8dce5d849",
+      "symbols": [
+        "declval",
+        "unknown",
+        "dispatched_handler_state",
+        "typename",
+        "WIL_DOXYGEN",
+        "Args",
+        "orphaned",
+        "NTDDI_VERSION",
+        "const",
+        "U",
+        "state",
+        "if",
+        "args",
+        "std",
+        "Dispatcher",
+        "defined",
+        "dispatcher"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/cppwinrt_notifiable_server_lock.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/cppwinrt_notifiable_server_lock.h.spz",
+      "readable_semantic_path": "semantic/include/wil/cppwinrt_notifiable_server_lock.h.se",
+      "source_hash": "1c9ca42a47da9724c7ee27608308be38a2542c87e48afa8999cb056cdb00c054",
+      "symbols": [
+        "unknown",
+        "operator"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/cppwinrt_wrl.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/cppwinrt_wrl.h.spz",
+      "readable_semantic_path": "semantic/include/wil/cppwinrt_wrl.h.se",
+      "source_hash": "97c6c033cfbbc5ae6d691488168daed48689c5b8efa9d0e78f1f51f9c2be8613",
+      "symbols": [
+        "unknown",
+        "modulePtr"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/filesystem.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/filesystem.h.spz",
+      "readable_semantic_path": "semantic/include/wil/filesystem.h.se",
+      "source_hash": "b2431bea7000a4bf8565032764b57ec5f0303b05541a1d2c9a6929c278b8e1c6",
+      "symbols": [
+        "left",
+        "unknown",
+        "path",
+        "right",
+        "if",
+        "sizeof",
+        "pathLength",
+        "inline"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/network.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/network.h.spz",
+      "readable_semantic_path": "semantic/include/wil/network.h.se",
+      "source_hash": "695f7afac6b7edeeecd31a622841aaa381d5702f5210efa784238aa6cb328993",
+      "symbols": [
+        "unknown",
+        "WIL_USE_STL",
+        "WIL_DOXYGEN",
+        "WIL_ENABLE_EXCEPTIONS",
+        "if",
+        "defined"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/nt_result_macros.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/nt_result_macros.h.spz",
+      "readable_semantic_path": "semantic/include/wil/nt_result_macros.h.se",
+      "source_hash": "5adf32b3cf7bacb440aec9ddb0955fce224d9e02423cc86adcb188e37e8e838d",
+      "symbols": [
+        "unknown",
+        "details",
+        "__VA_ARGS__",
+        "isNormalized",
+        "__statusRet",
+        "status",
+        "__WI_SUPPRESS_BREAKING_WARNINGS_S",
+        "__WI_SUPPRESS_BREAKING_WARNINGS_E",
+        "fmt",
+        "g_pfnResultFromCaughtExceptionInternal"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/registry.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/registry.h.spz",
+      "readable_semantic_path": "semantic/include/wil/registry.h.se",
+      "source_hash": "d26511f047f0cfd1ffa917ba175290ba423685c5e047721a494fbca67168bd61",
+      "symbols": [
+        "unknown"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/registry_helpers.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/registry_helpers.h.spz",
+      "readable_semantic_path": "semantic/include/wil/registry_helpers.h.se",
+      "source_hash": "5e603f1e0e255e1ae175d6ab89a0ddde2526bea8d9e308ffff4a082e452a99a7",
+      "symbols": [
+        "unknown",
+        "end_iterator",
+        "if",
+        "current"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/resource.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/resource.h.spz",
+      "readable_semantic_path": "semantic/include/wil/resource.h.se",
+      "source_hash": "da46e44e165ca2bba690cda21e9578f5c7dc9e68e28af8788b23313da9c59ae9",
+      "symbols": [
+        "m_dismissed",
+        "unknown",
+        "_UNORDERED_SET_",
+        "__WIL_RESOURCE_UNIQUE_HASH",
+        "shared_storage",
+        "_UNORDERED_MAP_",
+        "WIL_DOXYGEN",
+        "pointer_storage",
+        "ptr",
+        "if",
+        "defined"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/result.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/result.h.spz",
+      "readable_semantic_path": "semantic/include/wil/result.h.se",
+      "source_hash": "ff52d953cb6ccb0fe25eaeae0bb3fe6e0511db242692a2316bf5d05402b37f76",
+      "symbols": [
+        "unknown",
+        "const",
+        "SemaphoreValue"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/result_macros.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "source_hash": "35bc595c8b338809f23f5db90e1ff817f41648940f594a2de3a3bf5273a1b74a",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "include/wil/result_originate.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/result_originate.h.spz",
+      "readable_semantic_path": "semantic/include/wil/result_originate.h.se",
+      "source_hash": "d4189916ae031228cbcb8696c5b3c632bd8d118fc97695ea5278cdba0e95c1fc",
+      "symbols": [
+        "unknown",
+        "GetRestrictedErrorInfo",
+        "details",
+        "shouldOriginate",
+        "wil",
+        "SetOriginateErrorCallback",
+        "restrictedErrorInformation",
+        "ResultStowedExceptionInitialize",
+        "RaiseRoOriginateOnWilExceptions"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/rpc_helpers.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/rpc_helpers.h.spz",
+      "readable_semantic_path": "semantic/include/wil/rpc_helpers.h.se",
+      "source_hash": "0713e5cd77f882d8aa2577a5efee6eddfa7d008a36c9de44fbe37e0090193c65",
+      "symbols": [
+        "unknown"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/safecast.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/safecast.h.spz",
+      "readable_semantic_path": "semantic/include/wil/safecast.h.se",
+      "source_hash": "af698b96d7dfcbf140393b062de3b40f171deb48311d0a45125f186030ba2287",
+      "symbols": [
+        "unknown"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/stl.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "source_hash": "5381c46a89f57bf15aaaf8a9b8b38e839d1ddbbca7b665b789d919cd018069d1",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "include/wil/token_helpers.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/token_helpers.h.spz",
+      "readable_semantic_path": "semantic/include/wil/token_helpers.h.se",
+      "source_hash": "a58636ae4f0a83a85209113f66f1358ca87d77bf5067eb05d7227df4ec5e6b3d",
+      "symbols": [
+        "unknown",
+        "infoClass"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/traceloggingconfig.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/traceloggingconfig.h.spz",
+      "readable_semantic_path": "semantic/include/wil/traceloggingconfig.h.se",
+      "source_hash": "0713374d283576c096f8fd57f6bfe5676a3b7295e7d2c40de41dd4d877ff326a",
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/win32_helpers.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/win32_helpers.h.spz",
+      "readable_semantic_path": "semantic/include/wil/win32_helpers.h.se",
+      "source_hash": "5c00672f2a01fb57ced22307212675fada7e6b7ad0a238a2e8e58bdd2d8a678e",
+      "symbols": [
+        "unknown",
+        "fn",
+        "L",
+        "EXTERN_C",
+        "hinst",
+        "__WI_LIBCPP_STD_VER",
+        "if",
+        "__cpp_lib_string_view",
+        "max_path_segment_length"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/win32_result_macros.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/win32_result_macros.h.spz",
+      "readable_semantic_path": "semantic/include/wil/win32_result_macros.h.se",
+      "source_hash": "135d434277d85dcb67467a1c10be44c883e842f268b1acab8fdcc4db9280106b",
+      "symbols": [
+        "unknown",
+        "verify_bool",
+        "_Post_satisfies_",
+        "SUCCEEDED",
+        "wil",
+        "ptr",
+        "hr",
+        "condition",
+        "__error",
+        "__errorRet",
+        "error",
+        "return",
+        "FORCEINLINE",
+        "__WI_SUPPRESS_BREAKING_WARNINGS_S",
+        "__WI_SUPPRESS_BREAKING_WARNINGS_E"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/windowing.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/windowing.h.spz",
+      "readable_semantic_path": "semantic/include/wil/windowing.h.se",
+      "source_hash": "1a998285702f7fe94c5c4173d469a209b04555dbae3c5bec7162d68b8a7a138c",
+      "symbols": [
+        "unknown",
+        "pCallback",
+        "lParam",
+        "if"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/winrt.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/winrt.h.spz",
+      "readable_semantic_path": "semantic/include/wil/winrt.h.se",
+      "source_hash": "13e2e9058eaa092559db4dee6a9f925ecc8b9c4cbe0decdb61375200a59db727",
+      "symbols": [
+        "unknown",
+        "size",
+        "typename",
+        "Args",
+        "NTDDI_VERSION",
+        "v",
+        "template",
+        "NTDDI_WINBLUE",
+        "if",
+        "struct",
+        "type",
+        "args",
+        "TFunc",
+        "func"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/wistd_config.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/wistd_config.h.spz",
+      "readable_semantic_path": "semantic/include/wil/wistd_config.h.se",
+      "source_hash": "117b9cdd63a19f4058e5ff14d5e704f9f708b7722b4ebec471319fa6e6857678",
+      "symbols": [
+        "unknown",
+        "__WI_LIBCPP_CXX03_LANG",
+        "if",
+        "__GNUC__",
+        "defined"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/wistd_functional.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/wistd_functional.h.spz",
+      "readable_semantic_path": "semantic/include/wil/wistd_functional.h.se",
+      "source_hash": "20dd903efa733ac1b55e1ef9c50532a27c7f8b31cca30d9bb30ea2bfb3b2e8d0",
+      "symbols": [
+        "unknown",
+        "if"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/wistd_memory.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/wistd_memory.h.spz",
+      "readable_semantic_path": "semantic/include/wil/wistd_memory.h.se",
+      "source_hash": "feb86c63886875907bbcf9911f4c702c21819d7e609e2c5468491153abe27313",
+      "symbols": [
+        "unknown",
+        "if"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/wistd_type_traits.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/wistd_type_traits.h.spz",
+      "readable_semantic_path": "semantic/include/wil/wistd_type_traits.h.se",
+      "source_hash": "8ac4c64778e416936fbf4fdc2da0023baed7556064dcb1a1552731874f3f3faa",
+      "symbols": [
+        "unknown",
+        "if",
+        "_Tp",
+        "conditional_t",
+        "__x"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "include/wil/wrl.h",
+      "kind": "SOURCE_MODULE",
+      "language": "cpp",
+      "semantic_path": "semantic/include/wil/wrl.h.spz",
+      "readable_semantic_path": "semantic/include/wil/wrl.h.se",
+      "source_hash": "a9b089553e4df93cd812215046a4966bab85d337099c2fe4741eac378a4124dd",
+      "symbols": [
+        "unknown",
+        "EXTERN_C"
+      ],
+      "status": "SEMANTIC_READY"
+    },
+    {
+      "path": "lib/Microsoft.Web.WebView2.Core.winmd",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "a60204b043f5d6171a7a5b8e92a55bbd20e45e720c90a6aaeea615fa471da7f1",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "lib/WebView2Loader.dll.lib",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "bfc8ccaaa056be95243a5b66a827e5849d2bb39676fca4dcc2053796d8e15c6d",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/unofficial-webview2/unofficial-webview2-config.cmake",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "8a7e6ca0cac94c59fc255a55c70ea5f30e20fd57972ddb4e392deb7933a1b4f3",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/vcpkg-cmake-config/copyright",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "04b60f99a43bfd7fefdc8364b24aac704a2160cef969b75ba6a38b62dc4c4b70",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/vcpkg-cmake-config/vcpkg-port-config.cmake",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "72bc3093337e633bdd19fe5d4dd1f38ca1918def49608d676a9c98c686d38b1e",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/vcpkg-cmake-config/vcpkg.spdx.json",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "7e6e3751aaa46e38219b941d94c7f0b65b50c2983c69c2cc2e6b1bd41e18a842",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/vcpkg-cmake-config/vcpkg_abi_info.txt",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "aced327a4d668091051ab8e8fa92414351285ac00acd6d9e33eecaebf205848b",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/vcpkg-cmake-config/vcpkg_cmake_config_fixup.cmake",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "f3880578674f1bdbc54b67c5fc3787aaab8ee8bcf4e3e6e008204bf4ab67aa0b",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/vcpkg-cmake/copyright",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "1ee376fc340e0aa6ad6a3581c94126e741468705096ac92263048a21daa86460",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/vcpkg-cmake/vcpkg-port-config.cmake",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "f0a30f77c8f5e3ac40436fe2518a61ad067f2955c7ef3be6d6a0ca4b81cd2a45",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/vcpkg-cmake/vcpkg.spdx.json",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "de958d7027314e3dfe3d8a9e584d3f5bb6d8834829a2496b7195eed21fd26db3",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/vcpkg-cmake/vcpkg_abi_info.txt",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "e9c1520fd62cda3c4c02be78b6c1742be98a6834b4fc5b8e99c10900de9b1627",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/vcpkg-cmake/vcpkg_cmake_build.cmake",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "6d1c27080fe3e768b5e7b968d6a28a37db154ebcb214297de25f10b6713511e1",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/vcpkg-cmake/vcpkg_cmake_configure.cmake",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "a8bc92be2faf621d6183ed1f3eb2ac3b103f4418b95f8695cf0dc7f7c5e8f724",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/vcpkg-cmake/vcpkg_cmake_install.cmake",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "3ae7886dc8434fac6f1e61190cc355fdec5fbd4f60758e2de20423cf49c91369",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/webview2/copyright",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "0af8f1b807512aae39c2ac1aa4d0cae65cabecb6fd554b8439a5162a0d6eca55",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/webview2/vcpkg.spdx.json",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "65b0b87797bc7aa88a5ce232765e7d54030d429ad4a8f61cb8b1f9c59745dc9e",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/webview2/vcpkg_abi_info.txt",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "9d42a215760f8c12224515d126ad12d597165587884d1886dfe298db706b63fa",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/wil/copyright",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "27ebda9d51f0a56b7e281ccd8230a27236dcb51c05f64b07869ecf6e965d68b0",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/wil/natvis/wil.natstepfilter",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "6babfa1cc75c4b028afcff19b929f6a2c2c37d7904ee306f9f31fe32e56daa2e",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/wil/natvis/wil.natvis",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "c450482325ebb63db686ea9c7a9f2c162004618b380e1ca3a392855bb1832d43",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/wil/vcpkg.spdx.json",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "b7d3b59b594b46da9373aef150fa8004185223a60518bdabe2f57234090ab6be",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/wil/vcpkg_abi_info.txt",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "4568f84b236e12653e35d0754597f5d0b3fcd742939ccd09a1fe5edeb28cced2",
+      "status": "UNSUPPORTED"
+    },
+    {
+      "path": "share/wil/wilConfig.cmake",
+      "kind": "SOURCE_MODULE",
+      "source_hash": "6bc5b193f5872f661fc85216a3fdc855126567e260d91cae3d288a431e28f48c",
+      "status": "UNSUPPORTED"
+    }
+  ],
+  "licenses": [
+    "share/vcpkg-cmake/copyright",
+    "share/vcpkg-cmake-config/copyright",
+    "share/webview2/copyright",
+    "share/wil/copyright"
+  ]
+}
