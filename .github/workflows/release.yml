@@ -1,0 +1,83 @@
+name: Release Semantic WebView2 module
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing tag to package and release"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  package-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out release ref
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref }}
+          fetch-depth: 0
+
+      - name: Select release tag
+        id: release
+        shell: bash
+        run: |
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
+            tag="${{ inputs.tag }}"
+          else
+            tag="${GITHUB_REF_NAME}"
+          fi
+          if [[ ! "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+([-.].*)?$ ]]; then
+            echo "Tag must match vMAJOR.MINOR.PATCH[-suffix]: $tag" >&2
+            exit 1
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+
+      - name: Verify module payload
+        shell: bash
+        run: |
+          test -f semantic-webview2.smod
+          test -f LICENSE.md
+          test -d semantic
+          test -d source
+          test "$(find semantic -type f -name '*.se' | wc -l)" -gt 0
+          test "$(find semantic -type f -name '*.spz' | wc -l)" -gt 0
+          test "$(find source -type f | wc -l)" -gt 0
+
+      - name: Create release archive
+        shell: bash
+        env:
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
+        run: |
+          rm -rf dist staging
+          mkdir -p staging/semantic-webview2 dist
+          git archive --format=tar "$GITHUB_SHA" | tar -xf - -C staging/semantic-webview2
+          (cd staging && zip -qr "../dist/semantic-webview2-${RELEASE_TAG}.zip" semantic-webview2)
+          sha256sum "dist/semantic-webview2-${RELEASE_TAG}.zip" > "dist/SHA256SUMS.txt"
+          echo "Archive: dist/semantic-webview2-${RELEASE_TAG}.zip"
+          du -h "dist/semantic-webview2-${RELEASE_TAG}.zip"
+          cat dist/SHA256SUMS.txt
+
+      - name: Attest release archive
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: dist/semantic-webview2-${{ steps.release.outputs.tag }}.zip
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.release.outputs.tag }}
+          name: Semantic WebView2 ${{ steps.release.outputs.tag }}
+          generate_release_notes: true
+          files: |
+            dist/semantic-webview2-${{ steps.release.outputs.tag }}.zip
+            dist/SHA256SUMS.txt
+
