@@ -1,45 +1,25 @@
-name: Release Semantic WebView2 module
+name: Attested main-branch archive
 
 on:
   push:
-    tags:
-      - "v*"
+    branches:
+      - main
   workflow_dispatch:
-    inputs:
-      tag:
-        description: "Existing tag to package and release"
-        required: true
-        type: string
 
 permissions:
-  contents: write
+  contents: read
   id-token: write
   attestations: write
 
 jobs:
-  package-and-release:
+  archive-main:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out release ref
+      - name: Check out main
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref }}
+          ref: main
           fetch-depth: 0
-
-      - name: Select release tag
-        id: release
-        shell: bash
-        run: |
-          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
-            tag="${{ inputs.tag }}"
-          else
-            tag="${GITHUB_REF_NAME}"
-          fi
-          if [[ ! "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+([-.].*)?$ ]]; then
-            echo "Tag must match vMAJOR.MINOR.PATCH[-suffix]: $tag" >&2
-            exit 1
-          fi
-          echo "tag=$tag" >> "$GITHUB_OUTPUT"
 
       - name: Verify module payload
         shell: bash
@@ -52,32 +32,30 @@ jobs:
           test "$(find semantic -type f -name '*.spz' | wc -l)" -gt 0
           test "$(find source -type f | wc -l)" -gt 0
 
-      - name: Create release archive
+      - name: Create main archive
         shell: bash
-        env:
-          RELEASE_TAG: ${{ steps.release.outputs.tag }}
         run: |
           rm -rf dist staging
           mkdir -p staging/semantic-webview2 dist
-          git archive --format=tar "$GITHUB_SHA" | tar -xf - -C staging/semantic-webview2
-          (cd staging && zip -qr "../dist/semantic-webview2-${RELEASE_TAG}.zip" semantic-webview2)
-          sha256sum "dist/semantic-webview2-${RELEASE_TAG}.zip" > "dist/SHA256SUMS.txt"
-          echo "Archive: dist/semantic-webview2-${RELEASE_TAG}.zip"
-          du -h "dist/semantic-webview2-${RELEASE_TAG}.zip"
+          git archive --format=tar HEAD | tar -xf - -C staging/semantic-webview2
+          (cd staging && zip -qr "../dist/semantic-webview2-main-${GITHUB_SHA}.zip" semantic-webview2)
+          sha256sum "dist/semantic-webview2-main-${GITHUB_SHA}.zip" > dist/SHA256SUMS.txt
+          printf 'commit=%s\n' "$GITHUB_SHA" > dist/MAIN_COMMIT.txt
+          du -h "dist/semantic-webview2-main-${GITHUB_SHA}.zip"
           cat dist/SHA256SUMS.txt
 
-      - name: Attest release archive
+      - name: Attest main archive
         uses: actions/attest-build-provenance@v2
         with:
-          subject-path: dist/semantic-webview2-${{ steps.release.outputs.tag }}.zip
+          subject-path: dist/semantic-webview2-main-${{ github.sha }}.zip
 
-      - name: Publish GitHub release
-        uses: softprops/action-gh-release@v2
+      - name: Upload attested main archive
+        uses: actions/upload-artifact@v4
         with:
-          tag_name: ${{ steps.release.outputs.tag }}
-          name: Semantic WebView2 ${{ steps.release.outputs.tag }}
-          generate_release_notes: true
-          files: |
-            dist/semantic-webview2-${{ steps.release.outputs.tag }}.zip
+          name: semantic-webview2-main-${{ github.sha }}
+          path: |
+            dist/semantic-webview2-main-${{ github.sha }}.zip
             dist/SHA256SUMS.txt
-
+            dist/MAIN_COMMIT.txt
+          if-no-files-found: error
+          retention-days: 90
